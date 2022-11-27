@@ -1,6 +1,4 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
---LoadingFrame.Version.Text = "V 1.0.0"
-
 
 local Window = Rayfield:CreateWindow({
     Name = "HG",
@@ -118,6 +116,12 @@ elseif game.PlaceId == 2788229376 then  -- Da Hood
         Callback = function()
             _G.Toggles = "V"
             loadstring(game:HttpGet("https://raw.githubusercontent.com/NighterEpic/Faded-Grid/main/YesEpic", true))()
+        end,
+     })
+     local Button = Main:CreateButton({
+        Name = "Nukermode Gui",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Allvideo/test/main/Whitelist.txt"))() 
         end,
      })
 
