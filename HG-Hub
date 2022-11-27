@@ -26,9 +26,13 @@ local Window = Rayfield:CreateWindow({
     }
  })
 
+ Playerss = game:GetService("Players")
+LP = Playerss.LocalPlayer
+
+
  Rayfield:Notify({
     Title = "Discord",
-    Content = "Copy Discord Link?",
+    Content = "Copy the discord link?",
     Duration = 5.5,
     Image = 4483362458,
     Actions = { -- Notification Buttons
@@ -56,12 +60,14 @@ local Window = Rayfield:CreateWindow({
 
 local thx = [[
     HUGGUIYT 
-    Cavera 165
+    C1
 
     Discord: discord.gg/GGhDPEvz95
  ]]
 
  local CreditosOw = Home:CreateParagraph({Title = "Criadores", Content = thx})
+
+-- local PlayerSec = Home:CreateSection("Player Info")
 
 if game.PlaceId == 2474168535 then
    local MainSec = Main:CreateSection("Westbound")
@@ -149,6 +155,77 @@ elseif game.PlaceId == 4520749081 then -- King Legacy
             loadstring(game:HttpGet("https://raw.githubusercontent.com/xOne2/King-Legacy/main/README.md"))()
         end,
      })
-     
-end
+   
+   elseif game.PlaceId == 155615604 then -- Prision Life
+      local MainSec = Main:CreateSection("Prision Life")
+
+      Rayfield:Notify({
+         Title = "Game Detected:",
+         Content = "Prision Life",
+         Duration = 5.5,
+         Image = 4483362458,
+         })
+
+   
+   local Button = Main:CreateButton({
+      Name = "Admin Commands",
+      Callback = function()
+         loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
+      end,
+   })
+
+   local Button = Main:CreateButton({
+      Name = "Silent Aim",
+      Callback = function()
+         loadstring(game:HttpGet('https://raw.githubusercontent.com/ScPtD/some-scripts/main/S3424342AimPL'))()
+      end,
+   })
+
+   local Button = Main:CreateButton({
+      Name = "Antilope GUI",
+      Callback = function()
+         loadstring(game:HttpGet('https://raw.githubusercontent.com/ScPtD/some-scripts/main/rwerweg634g654f74367373AntPLGui'))()
+      end,
+   })
+
+   local GetGunsSecPL = Main:CreateSection("Get Items")
+
+
+   local Button = Main:CreateButton({
+      Name = "Get MM9",
+      Callback = function()
+         workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver.M9.ITEMPICKUP)
+      end,
+   })
+
+  end
+
+  local Button = Main:CreateButton({
+   Name = "Get Remington 870",
+   Callback = function()
+      workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP)
+   end,
+})
+
+local Button = Main:CreateButton({
+   Name = "Get AK-47",
+   Callback = function()
+      workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["AK-47"].ITEMPICKUP)
+   end,
+})
+
+local Button = Main:CreateButton({
+   Name = "Get M4A1",
+   Callback = function()
+      workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver.M4A1.ITEMPICKUP)
+   end,
+})
+
+
+local Button = Main:CreateButton({
+   Name = "Get Riot Shield",
+   Callback = function()
+      workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Riot Shield"].ITEMPICKUP)
+   end,
+})
 
