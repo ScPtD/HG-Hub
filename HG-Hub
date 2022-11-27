@@ -74,14 +74,14 @@ if game.PlaceId == 2474168535 then
    })
 
    local Button = Main:CreateButton({
-      Name = "WB HemLish Script",
+      Name = "WB HemLish Script (Silent Aim, ESP, FastRob and more",
       Callback = function()
          loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/HemLish/Game/main/WestBound.lua"))()
       end,
    })
 
    local Button = Main:CreateButton({
-      Name = "PvP Script",
+      Name = "PvP Script (ESP, Aimbot, AutoFarm and more)",
       Callback = function()
           loadstring(game:HttpGet('https://raw.githubusercontent.com/cavera165/scpts/main/westbound%20aimbot'))()
       end,
