@@ -229,3 +229,40 @@ local Button = Main:CreateButton({
    end,
 })
 
+local GUIsPLSec = Main:CreateSection("Ingame Guis")
+
+local FadeGuiPLToggle = Main:CreateToggle({
+   Name = "Fade Gui",
+   CurrentValue = false,
+   Flag = "FadeGuiPL", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+      LP.PlayerGui.Home.fadeFrame.Visible = Value
+   end,
+})
+
+local CraftFramePLToggle = Main:CreateToggle({
+   Name = "Crafting Frame",
+   CurrentValue = false,
+   Flag = "CraftFrameToggle", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+      LP.PlayerGui.Home.hud.CraftingFrame.Visible = Value
+   end,
+})
+
+local VotekickFramePLToggle = Main:CreateToggle({
+   Name = "Votekick Frame",
+   CurrentValue = false,
+   Flag = "VotekickFramePL", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+      LP.PlayerGui.Home.hud.votekickFrame.Visible = Value
+   end,
+})
+
+local DiaryFramePLToggle = Main:CreateToggle({
+   Name = "diaryOfNamapo Frame",
+   CurrentValue = false,
+   Flag = "diaryOfNamapoFramePL", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+      LP.PlayerGui.Home.hud.diaryOfNamapo.Visible = Value
+   end,
+})
